@@ -30,8 +30,8 @@ function ContactMe() {
         // alert("Email sent successfully");
         toast.success("Email sent successfully");
         }}>
-            <input type='email' name='senderEmail' className='h-14 px-4 rounded-lg borderBlack focus:outline-pink-500 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none' placeholder='Your email' maxLength={500} required/>
-            <textarea name='message' className='h-52 my-3 rounded-lg borderBlack p-4 focus:outline-pink-500 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none' placeholder='Your message' maxLength={5000} required/>
+            <input type='email' name='senderEmail' className='h-14 px-4 rounded-lg borderBlack placeholder-pink-900/50 focus:outline-pink-800 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none dark:text-pink-900' placeholder='Your email' maxLength={500} required/>
+            <textarea name='message' className='h-52 my-3 rounded-lg borderBlack placeholder-pink-900/50  p-4 focus:outline-pink-800 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none dark:text-pink-900' placeholder='Your message' maxLength={5000} required/>
             <SendEmailButton />
         </form>
     </motion.section>
