@@ -33,7 +33,7 @@ function ProjectDetails({ params }) {
         <Link href={'/allprojects'}><BsArrowLeft className='transition-al group-hover:-translate-x-[0.3rem]' /></Link>
       </div>
 
-      <div className='w-[80%] mx-auto font-medium pt-52 px-20  flex flex-row'>
+      <div className='w-[80%] mx-auto font-medium pt-52 px-20 flex flex-row'>
         <div className='w-[70%] pr-10 flex flex-col'>
           <h1 className='text-4xl font-bold mb-2'>{selectedProject.name}</h1>
           <p className='text-xl mb-6'>{selectedProject.date}</p>
