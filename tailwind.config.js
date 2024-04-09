@@ -21,6 +21,8 @@ module.exports = {
       '16': '4rem',
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
   darkMode: "class",
 };

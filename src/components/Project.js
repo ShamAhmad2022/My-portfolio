@@ -3,35 +3,34 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from 'next/link';
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { IoMdInformationCircle } from "react-icons/io";
 
-function Project({ project }) {
+function Project({ project, index }) {
 
-    // const ref = useRef<HTMLDivElement>(null);
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-      target: ref,
-      offset: ["0 1", "1.33 1"], //["viewport target", "viewport target"]
-    });
-    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]); //[0, 1], [scale start, end]
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);//[0, 1], [opacity start, end]
+    const eachProjectAnimationVariants = {
+        initial: {
+            opacity: 0,
+        },
+        animate: (index) => {
+            return {
+                opacity: 1,
+                transition: {
+                    delay: 0.10 * index
+                }
+            }
+        }
+    }
 
     return (
-        <motion.div  ref={ref} style={{ scale: scaleProgress, opacity: opacityProgress}} className="group mb-3 sm:mb-8 last:mb-0">
-            <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] sm:group-even:pl-8 hover:bg-gray-200 transition">
-
-                <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]"> 
-                    <h3 className="text-2xl font-semibold">{project.title}</h3>
-
-                    <p className="mt-2 leading-relaxed text-gray-700">{project.description}</p>
-
-                    <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-                        {project.tags.map((tag, index) => (
-                            <li key={index} className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full">{tag}</li>
-                        ))}
-                    </ul>
-                </div>
-                <Image src={project.imageUrl} alt='project image' quality={95} className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition  group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 group-even:right-[initial] group-even:-left-40"/>
-            </section>
+        <motion.div className='last:hidden sm:last:block rounded-lg relative group' variants={eachProjectAnimationVariants} initial="initial" whileInView="animate" viewport={{once: true}} custom={index}>
+            <div className="transition-all group-hover:transition-all rounded-lg h-[11rem] sm:h-[14rem] w-[20rem] md:w-[22rem] lg:w-[25rem] border border-black/5 bg-cover bg-center flex justify-center items-center gap-10 group-hover:brightness-50 group-hover:bg-118%" style={{ backgroundImage: `url(${project.thumbnail})`}}>
+            </div>
+            <div className='hidden group-hover:flex absolute gap-9 -translate-x-[50%] -translate-y-[50%] top-[50%] left-[50%]'>
+                <Link href={project.url} className='h-16 w-16 rounded-full bg-white bg-opacity-70 hover:bg-opacity-100 text-3xl flex justify-center items-center transition-all dark:text-pink-900' target='_blank'><FaExternalLinkAlt /></Link>
+                <Link href={`/allprojects/${project.name}`} className='h-16 w-16 rounded-full bg-white bg-opacity-70 hover:bg-opacity-100 text-4xl flex justify-center items-center dark:text-pink-900'><IoMdInformationCircle /></Link>
+            </div>
         </motion.div>
     )
 }

@@ -16,31 +16,13 @@ function About() {
 
           <SectionHeading>About me</SectionHeading>
 
-          <p className="mb-3">
-            After graduating with a degree in{" "}
-            <span className="font-medium">Accounting</span>, I decided to pursue my
-            passion for programming. I enrolled in a coding bootcamp and learned{" "}
-            <span className="font-medium">full-stack web development</span>.{" "}
-            <span className="italic">My favorite part of programming</span> is the
-            problem-solving aspect. I <span className="underline">love</span> the
-            feeling of finally figuring out a solution to a problem. My core stack
-            is{" "}
-            <span className="font-medium">
-              React, Next.js, Node.js, and MongoDB
-            </span>
-            . I am also familiar with TypeScript and Prisma. I am always looking to
-            learn new technologies. I am currently looking for a{" "}
-            <span className="font-medium">full-time position</span> as a software
-            developer.
-          </p>
-    
-          <p>
-            <span className="italic">When I'm not coding</span>, I enjoy playing
-            video games, watching movies, and playing with my dog. I also enjoy{" "}
-            <span className="font-medium">learning new things</span>. I am currently
-            learning about{" "}
-            <span className="font-medium">history and philosophy</span>. I'm also
-            learning how to play the guitar.
+          <p className="mb-5">I graduated with a bachelor in <span className="font-medium">Software Engineering</span> in Feb 2022, and Now I'm a web developer.
+          I mainly work on <span className="font-medium">ReactJs</span> and <span className="font-medium">NextJs</span> for the frontend, and <span className="font-medium">Nodejs</span>, <span className="font-medium">ExpressJs</span> and <span className="font-medium">PostgreSQL</span> for the backend and the database management. I also have strong skills with HTML and CSS, alongside other skills such as Redux, Reducers, context API and CSS frameworks.</p>
+
+          <p className="mb-5">I'm really passionate about building various web-based applications. So far I’ve made so many projects such as a chat app, front store for products, users management system, notes applications, to-do list app and much more (you can visit my GitHub account for details).</p>
+
+          <p><span className="font-medium">I value responsibility and creativity in my work, and I'm excited to find a position where I can contribute to a dynamic company and continue to grow professionally.</span>
+          I want to mention that I don't really have an actual work experience(I didn't work in a company before), but I can confidently say that I have the required skills, both soft and technical, that make me well-suited for any professional environment. And that all I'm missing is a chance to take my first step in my career path and gain my first job.
           </p>
         </motion.section>
       );
