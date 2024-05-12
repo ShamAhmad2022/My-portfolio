@@ -41,7 +41,6 @@ function AllProjects() {
                     <EachProject project={project} index={index}/>
                 </React.Fragment>
             ))}
-          {activeTag==='NextJs' && <p>this portfolio</p>}
         </div>
       </div>
     </section>

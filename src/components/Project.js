@@ -24,7 +24,7 @@ function Project({ project, index }) {
     }
 
     return (
-        <motion.div className='last:hidden sm:last:block rounded-lg relative group' variants={eachProjectAnimationVariants} initial="initial" whileInView="animate" viewport={{once: true}} custom={index}>
+        <motion.div className='last:hidden sm:last:block rounded-lg relative group border border-black/40' variants={eachProjectAnimationVariants} initial="initial" whileInView="animate" viewport={{once: true}} custom={index}>
             <div className="transition-all group-hover:transition-all rounded-lg h-[11rem] sm:h-[14rem] w-[20rem] md:w-[22rem] lg:w-[25rem] border border-black/5 bg-cover bg-center flex justify-center items-center gap-10 group-hover:brightness-50 group-hover:bg-118%" style={{ backgroundImage: `url(${project.thumbnail})`}}>
             </div>
             <div className='hidden group-hover:flex absolute gap-9 -translate-x-[50%] -translate-y-[50%] top-[50%] left-[50%]'>

@@ -34,7 +34,7 @@ function ProjectDetails({ params }) {
 
       <div className='w-[80%] mx-auto font-medium pt-28 sm:pt-40 xl:pt-52 xl:px-20 flex flex-row justify-center'>
         <div className='w-[100%] xl:w-[70%] xl:pr-10 flex flex-col'>
-          <h1 className='text-4xl sm:text-6xl xl:text-4xl font-bold mb-2'>{selectedProject.name}</h1>
+          <h1 className='text-4xl sm:text-6xl xl:text-4xl font-bold mb-2 break-words'>{selectedProject.name}</h1>
           <p className='text-2xl sm:text-4xl xl:text-xl mb-8 xl:mb-6'>{selectedProject.date}</p>
 
           {/* tags for smaller and medium screens */}
