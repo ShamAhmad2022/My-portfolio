@@ -14,10 +14,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="!scroll-smooth scrollbar-thin scrollbar-thumb-pink-800 scrollbar-track-white">
-      <body className={`${inter.className} bg-pink-50 text-pink-950 relative dark:bg-pink-900 dark:text-pink-50 dark:text-opacity-90  selection:text-white selection:bg-pink-950/30 dark:selection:text-pink-800 dark:selection:bg-white/80`}>
-        <div className="bg-yellow-100 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-orange-700"></div>
-        <div className="bg-pink-200 absolute top-[-1rem] -z-10 left-[-5rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-pink-600"></div>
+    <html lang="en" className="!scroll-smooth scrollbar-thin scrollbar-thumb-[#c79e55]/80 scrollbar-track-white">
+      <body className={`${inter.className} bg-gray-50 text-stone-700 relative dark:bg-[#242426] dark:text-stone-50 dark:text-opacity-90  selection:text-white selection:bg-[#dac24a]/50 `}>
+        
+        <div className="bg-[#dac34c]/50 absolute -translate-x-[50%] -translate-y-[50%] top-[0] left-[0] -z-10 h-[15rem] w-[15rem] rounded-[50rem] dark:bg-[#242426]/100 dark:border-4 dark:border-[#c79e55]"></div>
         
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

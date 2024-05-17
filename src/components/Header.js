@@ -11,10 +11,12 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "../../context/active-section-context";
 import { useSectionInView } from "../../lib/hooks";
 import { TypeAnimation } from "react-type-animation";
+import { useTheme } from "../../context/theme-context";
 
 function Header() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLAstClick } = useActiveSectionContext();
+  const { theme } = useTheme();
 
   return (
     <section
@@ -44,7 +46,7 @@ function Header() {
         animate={{ opacity: 1, scale: 1 }}
       >
         Hello! I'm{" "}
-        <span className="font-semibold">
+        <span className="font-semibold" style={{display:'inline-block', color:'transparent', WebkitBackgroundClip:'text', backgroundImage:theme === "light"?'linear-gradient(to bottom right, #dac24a, #ac8c31':'linear-gradient(to bottom right, #c79e55, #c79e55'}}>
           {" "}
           <TypeAnimation
             sequence={[" Sham, a web developer", 1000]}
@@ -67,7 +69,7 @@ function Header() {
       >
         <Link
           href="#contact"
-          className="group bg-pink-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-pink-950 active:scale-105 transition dark:hover:bg-pink-900"
+          className="group bg-gradient-to-br from-[#dac24a] to-[#ac8c31] text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:from-[#ffeb87] hover:to-[#c8b03a] active:scale-105 transition dark:from-[#c79e55] dark:to-[#c79e55]"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLAstClick(Date.now());
@@ -83,13 +85,13 @@ function Header() {
           target="_blank"
         >
           Show CV{" "}
-          <FaExternalLinkAlt className="opacity-90 group-hover:-translate-y-1 transition" />{" "}
+          <FaExternalLinkAlt className="text-[#ac8c31] opacity-60 group-hover:-translate-y-1 transition group-hover:opacity-100" />{" "}
         </a>
 
         <a
           href="https://www.linkedin.com/in/sham-al-jalam"
           target="_blank"
-          className="bg-white text-pink-900 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-pink-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-white text-[#ac8c31] p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-[#dcc759] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-[#c79e55]"
         >
           <BsLinkedin />
         </a>
@@ -97,7 +99,7 @@ function Header() {
         <a
           href="https://github.com/ShamAhmad2022"
           target="_blank"
-          className="bg-white text-pink-900 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-pink-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-white text-[#ac8c31] p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-[#dcc759] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-[#c79e55]"
         >
           <FaGithubSquare />
         </a>

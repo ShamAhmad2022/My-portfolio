@@ -22,7 +22,7 @@ function Projects() {
             ))}
         </div>
         {/* <Link href="/projects" className='text-center font-semibold block mt-10 lg:text-right lg:mr-[4rem]'>Show more →</Link> */}
-        <Link href="/allprojects" className='mt-8 px-6 m-auto flex items-center justify-center gap-2 h-[3rem] w-[10rem] bg-pink-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-pink-950 active:scale-105 dark:bg-white dark:bg-opacity-10'>Show more...</Link>
+        <Link href="/allprojects" className='mt-8 px-6 m-auto flex items-center justify-center gap-2 h-[3rem] w-[10rem] bg-gradient-to-br from-[#dac24a] to-[#ac8c31] text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:from-[#ffeb87] hover:to-[#c8b03a] active:scale-105 dark:from-[#c79e55] dark:to-[#c79e55]'>Show more...</Link>
     </section>
   )
 }

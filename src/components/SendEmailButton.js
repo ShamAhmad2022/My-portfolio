@@ -9,7 +9,7 @@ function SendEmailButton() {
   return (
     <button
       type="submit"
-      className="m-auto group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-pink-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-pink-950 active:scale-105 disabled:scale-100 disabled:bg-opacity-65 dark:bg-white dark:bg-opacity-10"
+      className="m-auto group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gradient-to-br from-[#dac24a] to-[#ac8c31] text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:from-[#ffeb87] hover:to-[#c8b03a] active:scale-105 disabled:scale-100 disabled:bg-opacity-65 dark:from-[#c79e55] dark:to-[#c79e55]"
       disabled={pending}
     >
       {pending ? (
