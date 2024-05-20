@@ -1,9 +1,9 @@
 # My profolio
 
-[Live link](https://sham-aj-portfolio.vercel.app/)
+[Live link](https://sham-aj-portfolio.vercel.app/) - [LinkedIn](https://www.linkedin.com/in/sham-al-jalam) - [CV](https://drive.google.com/file/d/1pszaK825YlrTGHRY9Pr0eF0t6WEZfS76/view) - [Email](shamahmadaljalam@gmail.com)
 
-[LinkedIn](https://www.linkedin.com/in/sham-al-jalam)
+## Screenshots
 
-[CV](https://drive.google.com/file/d/1pszaK825YlrTGHRY9Pr0eF0t6WEZfS76/view)
+![home page light mode](./public/lightMode.png)
 
-[Email](shamahmadaljalam@gmail.com)
+![home page dark mode](./public/darkMode.png)

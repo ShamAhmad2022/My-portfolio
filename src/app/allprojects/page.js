@@ -26,9 +26,9 @@ function AllProjects() {
   return (
     <section className='relative'>
       <CustomHead title='projects'/>
-      <div className='group absolute bg-white w-10 h-10 sm:w-14 sm:h-14 flex justify-center items-center font-black text-2xl p-6 sm:p-8 rounded-full top-5 left-5 sm:top-10 sm:left-10 borderBlack transition-all hover:scale-110 dark:bg-[#c79e55] dark:border-4 dark:border-[#242426] cursor-pointer'>
-        <Link href={'/'}><BsArrowLeft className='transition-al group-hover:-translate-x-[0.3rem]' /></Link>
-      </div>
+      <Link href={'/'} className='group absolute bg-white w-10 h-10 sm:w-16 sm:h-16 flex justify-center items-center font-black text-2xl rounded-full top-5 left-5 sm:top-10 sm:left-10 borderBlack transition-all hover:scale-110 dark:bg-[#c79e55] dark:outline dark:outline-4 dark:outline-[#242426] cursor-pointer'>
+        <BsArrowLeft className='transition-all duration-300 group-hover:-translate-x-[0.3rem]' />
+      </Link>
       <div className='w-[90%] mx-auto py-20 md:py-36 md:w-[90%] lg:py-24 lg:w-[80%]'>
         <motion.ul initial={{opacity:0}} animate={{opacity:1}} className='flex gap-4 justify-center flex-wrap'>{filterTags.map((tag, index)=>(
         <li key={index} className={clsx('bg-white/70 border border-black/10 py-3 px-6 rounded-full hover:cursor-pointer hover:bg-white/100 flex justify-center items-center dark:bg-white/30',{"border-4 !border-[#dac34c] bg-white/100 dark:!border-[#c79e55]" : selectedTagId === index})} onClick={()=>{setActiveTag(tag); setSelectedTagId(index);}}>{tag}</li>
