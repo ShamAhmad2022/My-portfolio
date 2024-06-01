@@ -1,12 +1,12 @@
 'use client';
 
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 const ThemeContext = createContext(null);
 
 function ThemeContextProvider({ children }) {
 
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("dark");
 
     const toggleTheme = () => {
         if(theme === "light"){
@@ -17,6 +17,10 @@ function ThemeContextProvider({ children }) {
             document.documentElement.classList.remove("dark");
         }
     }
+
+    useEffect(()=>{
+        document.documentElement.classList.add("dark");
+    },[]);
 
 
   return (
