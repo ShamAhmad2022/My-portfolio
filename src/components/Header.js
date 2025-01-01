@@ -46,7 +46,7 @@ function Header() {
         animate={{ opacity: 1, scale: 1 }}
       >
         Hello! I'm{" "}
-        <span className="font-semibold" style={{display:'inline-block', color:'transparent', WebkitBackgroundClip:'text', backgroundImage:theme === "light"?'linear-gradient(to bottom right, #dac24a, #ac8c31':'linear-gradient(to bottom right, #c79e55, #c79e55'}}>
+        <span className="font-semibold" style={{ display: 'inline-block', color: 'transparent', WebkitBackgroundClip: 'text', backgroundImage: theme === "light" ? 'linear-gradient(to bottom right, #dac24a, #ac8c31' : 'linear-gradient(to bottom right, #c79e55, #c79e55' }}>
           {" "}
           <TypeAnimation
             sequence={[" Sham, a web developer", 1000]}
@@ -54,10 +54,11 @@ function Header() {
             repeat={false}
           />
         </span>
-        with almost <span className="font-bold">2 years</span> of experience. I
+        with over <span className="font-bold">2 years</span> of experience. I
         build{" "}
         <span className="italic">functional, user friendly and responsive</span>{" "}
-        websites and web applications.
+        websites and web applications. I value <span className="italic">creativity</span> and <span className="italic">responsibility</span> in my work.
+
         {/* My focus is {" "} <span className='underline'>React.js (Next.js)</span> */}
       </motion.h1>
 
